@@ -41,7 +41,8 @@ public class Nev {
 		System.out.println("Összeg: "+(a+b));
 		System.out.println("Külömbség: "+(a-b));
 		System.out.println("Szorzat: "+(a*b));
-		System.out.println("Szorzat: "+(a/b));
+		System.out.println("Hányados: "+((double)a/b));
+		
 		
 		//szamtani közep
 		int ossz=0;
