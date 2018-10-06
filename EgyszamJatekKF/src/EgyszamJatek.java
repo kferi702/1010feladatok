@@ -5,7 +5,9 @@ public class EgyszamJatek {
 
 	static RandomAccessFile f;
 	static String t[][] = new String[9][10];
-	static int be;
+	static int ford;
+	static int tipp;
+	static int tippsorszam;
 	static void adatokBe(String f_neve)
 	{
 		try {
@@ -67,29 +69,71 @@ public class EgyszamJatek {
 		System.out.print("7. Feladat: ");
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Kérem a forduló sorszámát [1−10]: ");
-		be  = sc.nextInt();
+		ford  = sc.nextInt();
 			}
 	static void f8() {
 		System.out.print("8. Feladat: ");
-		int tipp;
-		for (int i = 0; i < t.length; i++) {
-			for (int j = 0; j < t[i].length-1; j++) {
+		tipp=Integer.parseInt(t[0][0]);
+		for (int i = 1; i < t.length-1; i++) {
+			if (tipp<Integer.parseInt(t[ford][i])) {
+				tipp=Integer.parseInt(t[ford][i]);
+				tippsorszam=i-1;
+			}else if(tipp==Integer.parseInt(t[ford][i])) {
+				tipp=0;
+				
 				
 			}
 		}
+
+		if (tipp>0) {
+			System.out.print("A nyertes tipp a megadott fordulóban: "+tipp);
+		}else {
+			System.out.print("Nem volt egyedi tipp a megadott fordulóban!");
+		}
+	}
+	static void f9() {
+		System.out.print("\n9. Feladat: ");
+		if (tipp>0) {
+			System.out.print("A megadott forduló nyertese: "+t[tippsorszam][10]);
+		}else {
+			System.out.print("Nem volt nyertes a megadott fordulóban!");
+		}
 		
-		System.out.println("A nyertes tipp a megadott fordulóban: ");
+	}
+	static void f10(String f_neve) {
+		System.out.print("\n9. Feladat: ");
+		if(tipp>0) {
+			try
+			{	
+				f = new RandomAccessFile(f_neve, "rw");
+				f.writeBytes("Forduló sorszáma: "+tippsorszam+".\n"
+						+ "Nyertes tipp: "+t[tippsorszam][ford]+"\n"
+								+ "Nyertes Játékos: "+t[tippsorszam][10]);
+			}catch(IOException e) {
+				System.out.println("Hiba a kiírásnál!");
+			}
+			System.out.println("Nyertes kiírása fájlba megtörtént.");
+		
+		}else{
+			System.out.println("Nem volt nyertes a megadott fordulóban!");
+		}
+		
+		
+		
+		
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		adatokBe("egyszamjatek.txt");
-		kiiras();
+		//kiiras();
 		f3();
 		f4();
 		f5();
 		f6();
 		f7();
 		f8();
+		f9();
+		f10("nyertes.txt");
 	}
 	
 }
