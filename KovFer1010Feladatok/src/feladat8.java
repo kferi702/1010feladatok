@@ -5,7 +5,7 @@ public class feladat8 {
 		System.out.println("8.feladat:"
 				+ "\n\tLegyen a paraméter egy 100 és 9999 közé eső szám! "
 				+ "\n\tÍrasd ki a képernyőre a számjegyek összegét! "
-				+ "\n\tA megoldáshoz használj ciklust!");
+				+ "\n\tA megoldáshoz használj ciklust!\n");
 		
 		String szam=Integer.toString((int)(Math.random()*9999)+100);
 		

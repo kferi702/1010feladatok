@@ -6,7 +6,7 @@ public class feladat4 {
 				+ "\n\tÍrj olyan programot, amely kiírja a paraméterként "
 				+ "\n\tmegadott szám osztóit! Ha a szám prím, erről is "
 				+ "\n\ttájékoztassa a felhasználót! "
-				+ "A megoldáshoz használj for-ciklust!");
+				+ "A megoldáshoz használj for-ciklust!\n");
 
 		for (int i = Integer.parseInt(args[0]); i > 0; i--) {
 			if(Integer.parseInt(args[0])%i==0) {

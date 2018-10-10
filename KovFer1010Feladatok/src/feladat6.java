@@ -5,7 +5,7 @@ public class feladat6 {
 		System.out.println("6.feladat:"
 				+ "\n\tÍrj programot, amely a paraméterben "
 				+ "\n\tmegadott számról eldönti, hogy tökéletes-e!"
-				+ "\n\t6 osztói: 1+2+3=6");
+				+ "\n\t6 osztói: 1+2+3=6\n");
 		
 		int szam=Integer.parseInt(args[0]);
 		int osztok=0;

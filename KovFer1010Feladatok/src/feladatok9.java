@@ -5,7 +5,7 @@ public class feladatok9 {
 		System.out.println("9.feladat:"
 				+ "\n\tÍrj programot, amely kirajzolja az amerikai zászlót! "
 				+ "\n\t(A bal felső sarokban csillagok, a többi részen kötőjelek.) "
-				+ "\n\tA megoldáshoz használj egymásba ágyazott ciklusokat!");
+				+ "\n\tA megoldáshoz használj egymásba ágyazott ciklusokat!\n");
 		
 		for (int i = 0; i < 10; i++) {
 			if (i==0||i==2||i==4){

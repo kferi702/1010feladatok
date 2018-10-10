@@ -5,7 +5,7 @@ public class feladat7 {
 		System.out.println("7.feladat:"
 				+ "\n\tKészíts programot, amely a paraméterben megadott "
 				+ "\n\ttetszőleges számú paraméternek "
-				+ "\n\tszámítja ki a számtani közepét!");
+				+ "\n\tszámítja ki a számtani közepét!\n");
 		
 		int osszeg=0;
 		int kozep= 0;

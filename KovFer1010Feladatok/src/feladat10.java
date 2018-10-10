@@ -8,7 +8,7 @@ public class feladat10 {
 				+ "\n\tRajzoltass a képernyőre csillagokkal olyan téglalapot, "
 				+ "\n\tmelynek magasságát és szélességét paraméterben adhatjuk meg. "
 				+ "\n\tHa nem adunk meg paramétereket, az alapértelmezett magasság "
-				+ "\n\tés szélesség 5 csillag.");
+				+ "\n\tés szélesség 5 csillag.\n");
 
 		Scanner sc=new Scanner(System.in);
 		
