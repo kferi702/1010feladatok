@@ -1,5 +1,5 @@
-import java.util.Scanner;
-import java.util.concurrent.ForkJoinPool;
+import java.util.*;
+
 
 public class feladat10 {
 
